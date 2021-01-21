@@ -38,20 +38,30 @@ h6,
 p{
     margin: 0;
 }
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
 .container{
     margin-left: auto;
     margin: auto;
     padding: 0 15px;
     width: 1200px;
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
 }
 .list {
-    margin: 0;
-    padding: 0;
-
     list-style: none;
 }
 /*header*/
+.header{
+    display: flex;
+   
+}
+.main-nav{
+    display: flex;
+    align-items: center;
+}
 
 .logo-header{
     color: var(--primary-text-color);
@@ -68,9 +78,23 @@ p{
 .logo-header .first-part-logo{
     color: var(--primary-accent-color);
 }
+.site-nav{
+    display: flex;
+
+    margin-left: 93px;
+}
+.site-nav .item + .item{
+    margin-left: 50px;
+}
+/* .site-nav .item:not(:last-child){
+    margin-right: 50px;
+} */
 .site-nav .link {
-    color:var(--secondary-text-color);
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     
+    color:var(--secondary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -83,9 +107,22 @@ p{
 .site-nav .link.current{
     color: var(--primary-accent-color);   
 }
+.auth-nav{
+    display: flex;
+    margin-left: auto;
+}
+.auth-nav .item + .item{
+    margin-left: 50px;
+}
+/* .auth-nav .item:not(:last-child){
+    margin-right: 50px;
+} */
 .auth-nav .link{
-    color: var(--secondary-accent-color);
-    
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--secondary-accent-color); 
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -97,12 +134,19 @@ p{
 }
 /*hero*/
 .hero{
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     background-color: var(--hero-footer-background-color);
     text-align: center;
 }
 .main-header{
-   color: var(--primary-white-color);
-    
+    max-width: 696px;
+    margin-bottom: 30px;
+    margin-left:auto;
+    margin-right:auto;
+
+    color: var(--primary-white-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -134,7 +178,7 @@ p{
     color: var(--primary-accent-color);
     background-color: var(--primary-white-color);
 } */
-.section-title{
+.features-main-title{
     color: var(--secondary-text-color);
 
     font-weight: 700;
@@ -143,48 +187,103 @@ p{
     text-align: center;
 }
 /*features*/
+.features-list{
+    display: flex;
+    margin-top: 94px;
+}
+
+.features-list .item + .item{
+margin-right: 30px;
+min-width: 270px;
+}
 .features-title{
     color: var(--secondary-text-color);
-
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
-.features-text{
-    color: var(--secondary-accent-color);
 
+.features-text{
+    margin-top: 10px;
+    color: var(--secondary-accent-color);
     font-size: 14px;
     line-height: 1.71;
 }
+/* what we do */
+.what-we-do-section{
+    margin-top: 94px;
+}
+.what-we-do-title{
+    color: var(--secondary-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;    
+}
+.what-we-do-list{
+    display: flex;
+    margin-top: 50px;
+}
+.what-we-do-list .item + .item{
+    margin-left: 30px;
+}
 /*our team*/
 .our-team{
+    margin-top: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
     background-color: var(--portfolio-button-bgc);
+}
+.our-team-title{
+    color: var(--secondary-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center; 
+}
+.our-team-list{
+    display: flex;
+    margin-top: 50px;
+}
+.our-team-list .item + .item{
+    margin-left: 30px;
+}
+.our-team-card{
+    min-width: 270px;
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--primary-white-color);
+}
+.our-team-description{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .our-team-name{
     color: var(--secondary-text-color); 
-
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
-.proffession{
-    color: var(--secondary-accent-color);
+.our-team-proffession{
+    margin-top: 10px;
 
+    color: var(--secondary-accent-color);
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
 /*footer*/
 .footer{
-    background-color: var(--hero-footer-background-color);
-    
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--hero-footer-background-color); 
     font-style: normal;
 }
 .logo-footer{
     color: var(--primary-white-color);
-
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -199,6 +298,8 @@ p{
     color: var(--primary-accent-color);
 }
 .address{
+    margin-top: 20px;
+
     font-style:normal;
     font-size: 14px;
     line-height: 1.71;
@@ -207,11 +308,18 @@ p{
     color:var(--primary-white-color);
     text-decoration: none;
 }
+.address .item + .item{
+    margin-top: 9px;
+}
 .contacts{
     color: rgba(255, 255, 255, .6);
     text-decoration: none;
 }
 /*portfolio*/
+.portfolio-section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .portfolio-header{
     font-weight: 900;
     font-size: 44px;
@@ -219,7 +327,19 @@ p{
     text-align: center;
     text-transform: uppercase;
 }
+.buttons-list{
+    display: flex;
+    justify-content: center;
+}
+.buttons-list .item + .item{
+    margin-left: 8px;
+}
 .nav-button{
+    padding: 6px 22px;
+    margin-bottom: 50px;
+    border: transparent;
+    border-radius: 4px;
+
     background-color: var(--portfolio-button-bgc);
     color:var(--secondary-text-color); 
     font-family: inherit;
@@ -235,9 +355,29 @@ p{
     background-color: var(--primary-accent-color);
     color:var(--primary-white-color);
 }
+.card-list{
+    display: flex;
+    margin:-15px;
+    flex-wrap: wrap;
+}
+.card-item{
+    margin: 15px;
+}
+/* .card-list:not(:nth-child(3n)) {
+    margin-left: 15px;
+} */
+
+/* .card-list .item + .item{
+    margin-left: 30px;
+} */
+.card-description{
+    background-color: var(--primary-white-color);;
+    padding: 20px 24px;
+}
 .card{
     text-decoration: none;
 }
+
 .card.title{
     color:var(--secondary-text-color);
 
@@ -246,7 +386,7 @@ p{
     line-height: 2;
     text-decoration: none;
 }
-.card.item{
+.card-text{
     color: var(--secondary-accent-color);
 
     font-size: 16px;
