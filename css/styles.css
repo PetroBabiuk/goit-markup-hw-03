@@ -30,6 +30,8 @@ body {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 h1,
 h2,
@@ -54,6 +56,16 @@ ol {
 }
 .list {
   list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 /*header*/
 .head {
@@ -261,8 +273,8 @@ ol {
 .our-team-description {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 59px;
-  padding-right: 59px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .our-team-name {
   color: var(--secondary-text-color);
@@ -338,7 +350,7 @@ ol {
 }
 .nav-button {
   padding: 6px 22px;
-  border: transparent;
+  border-color: transparent;
   border-radius: 4px;
 
   background-color: var(--portfolio-button-bgc);
@@ -355,6 +367,7 @@ ol {
 .nav-button:active {
   background-color: var(--primary-accent-color);
   color: var(--primary-white-color);
+  outline: none;
 }
 .card-list {
   display: flex;
